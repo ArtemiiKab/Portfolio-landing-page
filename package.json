@@ -1,0 +1,14 @@
+{
+  "name": "kabanov_portfolio",
+  "version": "1.0.0",
+  "description": "My landing page for portfolio",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "author": "Artemii Kabanov",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.13.0"
+  }
+}
