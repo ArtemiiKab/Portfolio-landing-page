@@ -44,7 +44,7 @@
     position:fixed;
     top:0;
     width:100%;
-    opacity:0.8;
+   
     visibility:hidden;
     &.show{
         visibility: visible;
@@ -62,7 +62,7 @@
     &-nav{
         margin:0;
         padding:0;
-        background: darken($primary-color, 5); 
+        background: rgba(darken($primary-color, 5), 0.8); 
         list-style: none; 
         transform: translate3d(0, -100%, 0); 
         @include ease-out;
@@ -72,7 +72,7 @@
     } 
 
     &-branding{
-        background: $primary-color;
+        background: rgba($primary-color, 0.5);
         @include ease-out;
         transform: translate3d(0, 100%, 0); 
         @include ease-out;
@@ -83,7 +83,7 @@
         .portrait{
             width:25vw;
             height:25vw;
-            background: url(/dist/images/myFace.jpg);
+            background: url(/dist/img/myFace.jpg);
             background-size: cover;
             border-radius:50%;
             border:solid 0.3vw $secondary-color; 
@@ -107,7 +107,7 @@
     .nav-link{
         display:inline-block;
         position:relative; 
-        font-size: 3vw;
+        font-size: 30px;
         padding: 1rem 0; 
         font-weight:300;
         @include ease-out; 
