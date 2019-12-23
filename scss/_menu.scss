@@ -83,7 +83,7 @@
         .portrait{
             width:25vw;
             height:25vw;
-            background: url(/dist/img/myFace.jpg);
+            background: url(img/myFace.jpg);
             background-size: cover;
             border-radius:50%;
             border:solid 0.3vw $secondary-color; 
@@ -120,7 +120,6 @@
         
     }
 } 
-
 
 //Delay for each nav-item 
 

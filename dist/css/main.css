@@ -55,7 +55,7 @@
     .menu-branding .portrait {
       width: 25vw;
       height: 25vw;
-      background: url(/dist/img/myFace.jpg);
+      background: url(img/myFace.jpg);
       background-size: cover;
       border-radius: 50%;
       border: solid 0.3vw #00b689;
@@ -103,7 +103,7 @@ body {
   font-family: "Poppins", "sans-serif";
   line-height: 1.5; }
   body#bg-image {
-    background: url("/dist/img/background.jpg");
+    background: url("img/background.jpg");
     background-attachment: fixed;
     background-size: cover; }
     body#bg-image:after {
@@ -177,12 +177,69 @@ main {
     padding: 0.5rem;
     border-bottom: #00b689 5px solid; }
 
+.projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.7rem; }
+  .projects img {
+    width: 100%;
+    border: #fff solid 3px; }
+    .projects img:hover {
+      opacity: 0.5;
+      border-color: #00b689;
+      transition: all 0.5s ease-out; }
+
+.btn, .btn-dark, .btn-light {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem; }
+  .btn:hover, .btn-dark:hover, .btn-light:hover {
+    cursor: pointer;
+    background: #00b689;
+    color: #fff; }
+
+.btn-dark {
+  background: black;
+  color: #fff; }
+
+.btn-light {
+  background: #c4c4c4;
+  color: #333; }
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem; }
+  .boxes div {
+    font-size: 2rem;
+    border: 3px #fff solid;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 3rem;
+    transition: all 0.5s ease-out; }
+    .boxes div:hover {
+      padding: 0.5rem 1.5rem;
+      background: #00b689;
+      color: #fff; }
+      .boxes div:hover span {
+        color: #fff; }
+
 #main-footer {
   text-align: center;
   padding: 1ram;
   background: #2b2b2b;
   color: #fff;
   height: 6vw; }
+
+@media screen and (min-width: 1171px) {
+  .projects {
+    grid-template-columns: repeat(3, 1fr); } }
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  .projects {
+    grid-template-columns: repeat(3, 1fr); } }
 
 @media screen and (max-width: 768px) {
   main {
@@ -208,8 +265,12 @@ main {
     padding: 0.5vw; }
   .about-info {
     grid-template-areas: "bio-image"  "bio" "job-1" "job-2" "job-3";
-    grid-template-columns: 1fr; } }
+    grid-template-columns: 1fr; }
+  .projects {
+    grid-template-columns: repeat(2, 1fr); } }
 
 @media screen and (max-width: 500px) {
   main#home h1 {
-    margin-top: 1vh; } }
+    margin-top: 1vh; }
+  .projects {
+    grid-template-columns: repeat(1, 1fr); } }
